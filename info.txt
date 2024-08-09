@@ -1,1 +1,11 @@
-jQuery Topics 
+#Chorus jQuery Learnings
+
+1. jQuery methods
+
+2. jQuery ajax methods.
+
+3. jQuery form manipulation
+
+4. jQuery plugins
+
+5. jQuery performance
