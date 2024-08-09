@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $('ul').on('click', 'li .fa-trash', function () {
         $(this).parent().fadeOut(200, function () {
-            // Remove the list item after fade out
+            // Remove the list item after fadeout
             $(this).remove();
         });
     });

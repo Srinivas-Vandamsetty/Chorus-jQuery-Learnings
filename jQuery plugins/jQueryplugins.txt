@@ -52,7 +52,7 @@
 
 11. **LogosDistort.js**
     - **Definition**: A plugin for creating animated logo distortions.
-    - **Usage**: Adds dynamic and animated effects to logos.
+    - **Usage**: Adds dynamic and animated effects to the logos.
     - **CDN Link**: [LogosDistort.js CDN](https://cdn.jsdelivr.net/npm/logosdistort.js@1.0.0/dist/jquery.logosdistort.min.js)
 
 12. **Filer.js**

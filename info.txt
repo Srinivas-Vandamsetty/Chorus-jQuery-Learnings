@@ -1,4 +1,4 @@
-#jQuery learnings list
+#jQuery learnings list#
 
 1. jQuery methods
 

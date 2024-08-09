@@ -109,7 +109,7 @@
 
 12. **$.hide()**
     - **Definition**: Hides a visible form element.
-    - **Usage**: Makes a form element invisible, but still present in the DOM.
+    - **Usage**: Makes a form element invisible, but still present in DOM.
     - **Example**:
       ```javascript
       $('#myInput').hide();

@@ -26,7 +26,7 @@
      ```
 
 3. **Detach Elements to Work with Them**
-   - **Definition**: Use `.detach()` to remove elements from the DOM when performing multiple operations on them.
+   - **Definition**: Use `.detach()` to remove elements from DOM when performing multiple operations on them.
    - **Usage**: Improves performance by preventing reflows and repaints while working with elements. Reinsert them into the DOM when all operations are complete.
    - **Example**:
      ```javascript

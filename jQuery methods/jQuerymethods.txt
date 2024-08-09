@@ -185,7 +185,7 @@
      ```
 
 5. **.remove()**
-   - **Definition**: Removes the selected elements from the DOM.
+   - **Definition**: Removes the selected elements from DOM.
    - **Usage**: Deletes the selected elements and their content from the DOM.
    - **Example**:
      ```javascript
