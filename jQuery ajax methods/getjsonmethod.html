@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getJSON Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="getJSONButton">Load JSON Data with getJSON()</button>
+    <div id="jsonContent"></div>
+
+    <script>
+        // Trigger a JSON data load when the button is clicked
+        $("#getJSONButton").click(function(){
+            // Use jQuery's getJSON() to fetch data from 'data.json'
+            $.getJSON("data.json", function(data){
+                // Format the retrieved JSON data and display it in the 'jsonContent' div
+                var content = "Name: " + data.name + "<br>Age: " + data.age;
+                $("#jsonContent").html(content);
+            });
+        });
+    </script>    
+</body>
+</html>

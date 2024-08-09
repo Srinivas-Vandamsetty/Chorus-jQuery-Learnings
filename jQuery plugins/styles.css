@@ -1,0 +1,96 @@
+/* Alertify.js Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Filer.js Styles */
+.filer-input {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* PagePiling.js Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.section {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section1 { background-color: #3498db; }
+#section2 { background-color: #e74c3c; }
+#section3 { background-color: #2ecc71; }
+#section4 { background-color: #9b59b6; }
+nav {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+nav a {
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Slidebar.js Styles */
+body { margin: 0; }
+#menu {
+    width: 180px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    left: -250px;
+    transition: left 0.3s;
+    padding: 15px;
+}
+#menu.open {
+    left: 0;
+}
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+#text-above-toggle {
+    position: fixed;
+    top: 70px;
+    left: 230px;
+    color: #333;
+    font-size: 18px;
+}
+#toggle-btn {
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}

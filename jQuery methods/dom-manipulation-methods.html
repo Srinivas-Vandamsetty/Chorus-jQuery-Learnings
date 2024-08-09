@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced jQuery Methods Examples</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .wrapper {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>append()</h2>
+    <div id="container-append">
+        <p>First paragraph.</p>
+    </div>
+    <button id="append-btn">Append Paragraph</button>
+
+    <h2>before()</h2>
+    <div id="container-before">
+        <p>First paragraph.</p>
+    </div>
+    <button id="before-btn">Add Paragraph Before</button>
+
+    <h2>after()</h2>
+    <div id="container-after">
+        <p>First paragraph.</p>
+    </div>
+    <button id="after-btn">Add Paragraph After</button>
+
+    <h2>prepend()</h2>
+    <div id="container-prepend">
+        <p>First paragraph.</p>
+    </div>
+    <button id="prepend-btn">Prepend Paragraph</button>
+
+    <h2>remove()</h2>
+    <div id="container-remove">
+        <p class="remove-me">First paragraph.</p>
+        <p class="remove-me">Second paragraph.</p>
+        <p>Third paragraph.</p>
+    </div>
+    <button id="remove-btn">Remove Paragraphs</button>
+
+    <h2>replaceAll()</h2>
+    <div class="to-be-replaced">First div.</div>
+    <div class="to-be-replaced">Second div.</div>
+    <button id="replace-btn">Replace All</button>
+
+    <h2>wrap()</h2>
+    <div class="to-be-wrapped">First div.</div>
+    <div class="to-be-wrapped">Second div.</div>
+    <button id="wrap-btn">Wrap Elements</button>
+
+    <script>
+        // append() example
+        $("#append-btn").click(function() {
+            $("#container-append").append("<p class='highlight'>Appended paragraph.</p>");
+        });
+
+        // before() example
+        $("#before-btn").click(function() {
+            $("#container-before").before("<p class='highlight'>New paragraph before container.</p>");
+        });
+
+        // after() example
+        $("#after-btn").click(function() {
+            $("#container-after").after("<p class='highlight'>New paragraph after container.</p>");
+        });
+
+        // prepend() example
+        $("#prepend-btn").click(function() {
+            $("#container-prepend").prepend("<p class='highlight'>Prepended paragraph.</p>");
+        });
+
+        // remove() example
+        $("#remove-btn").click(function() {
+            $(".remove-me").remove();
+        });
+
+        // replaceAll() example
+        $("#replace-btn").click(function() {
+            $("<div class='highlight'>Replaced div.</div>").replaceAll(".to-be-replaced");
+        });
+
+        // wrap() example
+        $("#wrap-btn").click(function() {
+            $(".to-be-wrapped").wrap("<div class='wrapper'></div>");
+        });
+    </script>
+
+</body>
+</html>

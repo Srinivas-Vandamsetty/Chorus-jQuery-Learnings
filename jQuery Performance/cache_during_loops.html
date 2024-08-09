@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cache Length During Loops Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            // Cache the list items jQuery object
+            var $listItems = $('#list li');
+            // Cache the number of list items
+            var length = $listItems.length;
+    
+            // Iterate over each list item
+            for (var i = 0; i < length; i++) {
+                // Perform operations on each list item and log its text
+                console.log($listItems.eq(i).text());
+            }
+        });
+    </script>    
+</body>
+</html>

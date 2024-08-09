@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="getButton">Load Data with get()</button>
+    <div id="getContent"></div>
+
+    <script>
+        // Trigger a data load when the button is clicked
+        $("#getButton").click(function(){
+            // Use jQuery's get() method to fetch data from 'data.txt'
+            $.get("data.txt", function(data){
+                // Display the retrieved data in the 'getContent' div
+                $("#getContent").html(data);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optimize Selectors Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <p class="item">Item 1</p>
+        <p class="item">Item 2</p>
+        <p class="item">Item 3</p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Select all elements with class 'item' inside the container and iterate over them
+            $('#container .item').each(function() {
+                // Change the text color of each item to blue
+                $(this).css('color', 'blue');
+            });
+        });
+    </script>
+</body>
+</html>

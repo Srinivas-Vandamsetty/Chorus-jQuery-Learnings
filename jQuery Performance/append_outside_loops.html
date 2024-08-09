@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Append Outside of Loops Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        $(document).ready(function() {
+            // Cache the container element for efficiency
+            var $container = $('#container');
+            // Create an array to hold HTML strings
+            var elements = [];
+            
+            // Generate HTML strings for 100 items and push them into the array
+            for (var i = 0; i < 100; i++) {
+                elements.push('<div>Item ' + i + '</div>');
+            }
+            
+            // Join the array into a single string and set it as the HTML content of the container
+            $container.html(elements.join(''));
+        });
+    </script>
+</body>
+</html>

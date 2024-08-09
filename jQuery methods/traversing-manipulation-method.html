@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Traversing Methods Examples</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .box {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>children()</h2>
+    <div id="children-example" class="box">
+        Parent
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+    </div>
+    <button id="children-btn">Highlight Children</button>
+
+    <h2>each()</h2>
+    <ul id="each-example">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="each-btn">Alert Each Item</button>
+
+    <h2>find()</h2>
+    <div id="find-example" class="box">
+        Parent
+        <div class="inner-box">
+            Inner Box
+            <div class="find-me">Find me</div>
+        </div>
+    </div>
+    <button id="find-btn">Find and Highlight</button>
+
+    <h2>first()</h2>
+    <ul id="first-example">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="first-btn">Highlight First Item</button>
+
+    <h2>next()</h2>
+    <ul id="next-example">
+        <li>Item 1</li>
+        <li class="highlight">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="next-btn">Highlight Next Item</button>
+
+    <h2>parent()</h2>
+    <div id="parent-example" class="box">
+        Parent
+        <div class="inner-box">
+            Inner Box
+            <div class="child-box">Child Box</div>
+        </div>
+    </div>
+    <button id="parent-btn">Highlight Parent</button>
+
+    <h2>prev()</h2>
+    <ul id="prev-example">
+        <li>Item 1</li>
+        <li class="highlight">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="prev-btn">Highlight Previous Item</button>
+
+    <h2>siblings()</h2>
+    <ul id="siblings-example">
+        <li>Item 1</li>
+        <li class="highlight">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="siblings-btn">Highlight Siblings</button>
+
+    <script>
+        // children() example
+        $("#children-btn").click(function() {
+            $("#children-example").children().addClass("highlight");
+        });
+
+        // each() example
+        $("#each-btn").click(function() {
+            $("#each-example li").each(function(index, element) {
+                alert("Item " + (index + 1) + ": " + $(element).text());
+            });
+        });
+
+        // find() example
+        $("#find-btn").click(function() {
+            $("#find-example").find(".find-me").addClass("highlight");
+        });
+
+        // first() example
+        $("#first-btn").click(function() {
+            $("#first-example li").first().addClass("highlight");
+        });
+
+        // next() example
+        $("#next-btn").click(function() {
+            $("#next-example .highlight").next().addClass("highlight");
+        });
+
+        // parent() example
+        $("#parent-btn").click(function() {
+            $(".child-box").parent().addClass("highlight");
+        });
+
+        // prev() example
+        $("#prev-btn").click(function() {
+            $("#prev-example .highlight").prev().addClass("highlight");
+        });
+
+        // siblings() example
+        $("#siblings-btn").click(function() {
+            $("#siblings-example .highlight").siblings().addClass("highlight");
+        });
+    </script>
+
+</body>
+</html>

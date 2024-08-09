@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slidebar.js Example</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="text-above-toggle">Click on Toggle to open the Slidebar</div>
+    <div id="toggle-btn">Toggle Menu</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slidebar@0.4.0/dist/jquery.slidebar.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Toggle the 'open' class on the menu when the toggle button is clicked
+            $('#toggle-btn').click(function() {
+                $('#menu').toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Toggle Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>Click Item 1</li>
+        <li>Click Item 2</li>
+        <li>Click Item 3</li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            // Attach a click event handler to each list item
+            $('#list li').on('click', function() {
+                // Toggle the 'highlight' class on the clicked list item
+                $(this).toggleClass('highlight');
+            });
+        });
+    </script>
+</body>
+</html>

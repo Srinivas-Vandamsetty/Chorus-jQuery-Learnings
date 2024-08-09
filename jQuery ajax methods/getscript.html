@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getScript Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="getScriptButton">Load Script with getScript()</button>
+    <div id="scriptContent"></div>
+
+    <script>
+        // Trigger a script loading when the button is clicked
+        $("#getScriptButton").click(function(){
+            // Use jQuery's getScript() method to load and execute 'script.js'
+            $.getScript("script.js", function(){
+                // Optionally, you can add a callback function here if needed
+            });
+        });
+    </script>
+</body>
+</html>

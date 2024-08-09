@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CSS Methods Examples</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .blue {
+            color: blue;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>css()</h2>
+    <div id="css-example" class="box">This is a box.</div>
+    <button id="set-css-btn">Set CSS</button>
+    <button id="get-css-btn">Get CSS</button>
+
+    <h2>addClass()</h2>
+    <div id="addClass-example" class="box">This is a box.</div>
+    <button id="add-class-btn">Add Class</button>
+
+    <h2>hasClass()</h2>
+    <div id="hasClass-example" class="box">This is a box.</div>
+    <button id="check-class-btn">Check Class</button>
+
+    <h2>removeClass()</h2>
+    <div id="removeClass-example" class="box highlight">This is a box.</div>
+    <button id="remove-class-btn">Remove Class</button>
+
+    <h2>toggleClass()</h2>
+    <div id="toggleClass-example" class="box">This is a box.</div>
+    <button id="toggle-class-btn">Toggle Class</button>
+
+    <script>
+        // css() example
+        $("#set-css-btn").click(function() {
+            $("#css-example").css({
+                "background-color": "lightblue",
+                "font-size": "20px",
+                "border": "2px solid blue"
+            });
+        });
+        $("#get-css-btn").click(function() {
+            alert("Background Color: " + $("#css-example").css("background-color"));
+        });
+
+        // addClass() example
+        $("#add-class-btn").click(function() {
+            $("#addClass-example").addClass("highlight blue");
+        });
+
+        // hasClass() example
+        $("#check-class-btn").click(function() {
+            if ($("#hasClass-example").hasClass("highlight")) {
+                alert("Element has 'highlight' class");
+            } else {
+                alert("Element does not have 'highlight' class");
+            }
+        });
+
+        // removeClass() example
+        $("#remove-class-btn").click(function() {
+            $("#removeClass-example").removeClass("highlight");
+        });
+
+        // toggleClass() example
+        $("#toggle-class-btn").click(function() {
+            $("#toggleClass-example").toggleClass("highlight red");
+        });
+    </script>
+
+</body>
+</html>

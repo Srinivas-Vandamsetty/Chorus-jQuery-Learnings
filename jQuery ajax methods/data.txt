@@ -1,0 +1,5 @@
+This is data loaded using the ajax() method.</br></br>
+
+AJAX (Asynchronous JavaScript and XML) allows exchanging data with a server and updating parts of a web page without reloading the whole page. 
+The jQuery ajax() method provides core AJAX functionality, sending asynchronous HTTP requests to the server. 
+All jQuery AJAX methods use the ajax() method, and AJAX requests are triggered by JavaScript code.

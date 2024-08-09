@@ -1,0 +1,1 @@
+$("#scriptContent").html("This is data loaded using the getScript() method.");

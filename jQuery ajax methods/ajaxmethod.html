@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="ajaxButton">Load Data with ajax()</button>
+    <div id="ajaxContent"></div>
+
+    <script>
+        // Trigger an AJAX request when the button is clicked
+        $("#ajaxButton").click(function(){
+            // Perform an AJAX GET request to retrieve data from 'data.txt'
+            $.ajax({
+                url: "data.txt",
+                method: "GET",
+                // On success, display the response inside the 'ajaxContent' div
+                success: function(response){
+                    $("#ajaxContent").html(response);
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

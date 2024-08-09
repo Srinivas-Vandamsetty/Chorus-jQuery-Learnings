@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Form Manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>jQuery Form Manipulation</h1>
+    <form id="myForm">
+        <label for="myInput">Input:</label>
+        <input type="text" id="myInput" name="inputField" value="Initial Value"><br><br>
+
+        <label for="myCheckbox">Checkbox:</label>
+        <input type="checkbox" id="myCheckbox" name="checkboxField"><br><br>
+
+        <label for="mySelect">Select:</label>
+        <select id="mySelect" name="selectField">
+            <option value="Option1">Option 1</option>
+            <option value="Option2">Option 2</option>
+            <option value="Option3">Option 3</option>
+        </select><br><br>
+
+        <button type="button" id="serializeBtn">Serialize Form</button>
+        <button type="button" id="serializeArrayBtn">Serialize Array</button>
+        <button type="button" id="resetBtn">Reset Form</button>
+        <button type="button" id="focusBtn">Focus Input</button>
+        <button type="button" id="blurBtn">Blur Input</button>
+        <button type="button" id="disableBtn">Disable Input</button>
+        <button type="button" id="enableBtn">Enable Input</button>
+        <button type="button" id="showBtn">Show Input</button>
+        <button type="button" id="hideBtn">Hide Input</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Serialize form data and display it when the 'Serialize Form' button is clicked
+            $('#serializeBtn').click(function() {
+                var formData = $('#myForm').serialize();
+                var decodedData = decodeURIComponent(formData);
+                $('#result').text('Serialized Data: ' + decodedData.replace(/&/g, ', ').replace(/=/g, ' = '));
+            });
+
+            // Serialize form data as an array and display it when the 'Serialize Array' button is clicked
+            $('#serializeArrayBtn').click(function() {
+                var formArray = $('#myForm').serializeArray();
+                var output = 'Serialized Array:<br>';
+                $.each(formArray, function(index, field) {
+                    output += field.name + ': ' + field.value + '<br>';
+                });
+                $('#result').html(output);
+            });
+
+            // Reset the form when the 'Reset Form' button is clicked
+            $('#resetBtn').click(function() {
+                $('#myForm')[0].reset();
+            });
+
+            // Focus on the input field when the 'Focus Input' button is clicked
+            $('#focusBtn').click(function() {
+                $('#myInput').focus();
+            });
+
+            // Remove focus from the input field when the 'Blur Input' button is clicked
+            $('#blurBtn').click(function() {
+                $('#myInput').blur();
+            });
+
+            // Disable the input field when the 'Disable Input' button is clicked
+            $('#disableBtn').click(function() {
+                $('#myInput').prop('disabled', true);
+            });
+
+            // Enable the input field when the 'Enable Input' button is clicked
+            $('#enableBtn').click(function() {
+                $('#myInput').prop('disabled', false);
+            });
+
+            // Show the input field when the 'Show Input' button is clicked
+            $('#showBtn').click(function() {
+                $('#myInput').show();
+            });
+
+            // Hide the input field when the 'Hide Input' button is clicked
+            $('#hideBtn').click(function() {
+                $('#myInput').hide();
+            });
+        });
+    </script>    
+</body>
+</html>

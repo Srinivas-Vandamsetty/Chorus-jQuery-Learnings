@@ -1,0 +1,71 @@
+# jQuery AJAX Methods Definitions
+
+1. **$.ajax()**
+   - **Definition**: The base method for making asynchronous HTTP requests. It allows for full customization of the request.
+   - **Usage**: Can be used to make GET, POST, or other types of HTTP requests. Includes options for headers, data, success callbacks, error callbacks, and more.
+   - **Example**:
+     ```javascript
+     $.ajax({
+       url: 'https://example.com/api',
+       method: 'GET',
+       dataType: 'json',
+       success: function(response) {
+         console.log(response);
+       },
+       error: function(jqXHR, textStatus, errorThrown) {
+         console.error(textStatus, errorThrown);
+       }
+     });
+     ```
+
+2. **$.get()**
+   - **Definition**: A shorthand method for making HTTP GET requests. It is a simplified version of `$.ajax()` for GET requests.
+   - **Usage**: Ideal for retrieving data from a server without sending any data. Automatically parses the response as JSON if the data type is specified.
+   - **Example**:
+     ```javascript
+     $.get('https://example.com/api/data', function(response) {
+       console.log(response);
+     });
+     ```
+
+3. **$.post()**
+   - **Definition**: A shorthand method for making HTTP POST requests. It is a simplified version of `$.ajax()` for POST requests.
+   - **Usage**: Used to send data to a server. The data sent to the server is included in the request body.
+   - **Example**:
+     ```javascript
+     $.post('https://example.com/api/submit', { key: 'value' }, function(response) {
+       console.log(response);
+     });
+     ```
+
+4. **$.getJSON()**
+   - **Definition**: A shorthand method for making HTTP GET requests that expect a JSON response. It is a simpler way to work with JSON data.
+   - **Usage**: Automatically parses the response as JSON. Ideal for retrieving JSON-encoded data from a server.
+   - **Example**:
+     ```javascript
+     $.getJSON('https://example.com/api/data', function(response) {
+       console.log(response);
+     });
+     ```
+
+5. **$.getScript()**
+   - **Definition**: A shorthand method for loading and executing JavaScript files from the server.
+   - **Usage**: Useful for dynamically loading JavaScript files into your page.
+   - **Example**:
+     ```javascript
+     $.getScript('https://example.com/scripts/custom.js', function() {
+       console.log('Script loaded and executed.');
+     });
+     ```
+
+6. **$.load()**
+   - **Definition**: A shorthand method for loading HTML content from the server and placing it into a specified element.
+   - **Usage**: Retrieves HTML content from a URL and inserts it into the selected element. Can also handle URL query parameters.
+   - **Example**:
+     ```javascript
+     $('#container').load('https://example.com/content.html', function(response, status, xhr) {
+       if (status == 'error') {
+         console.error('Error loading content:', xhr.status, xhr.statusText);
+       }
+     });
+     ```

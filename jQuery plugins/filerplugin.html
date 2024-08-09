@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filer.js Simplified Example</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/filer@1.3.0/css/jquery.filer.css">
+</head>
+<body>
+
+    <h2>Upload Files</h2>
+    <input type="file" name="files[]" id="filer_input" multiple>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/filer@1.3.0/js/jquery.filer.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize Filer.js on the file input element
+            $('#filer_input').filer({
+                // Enable thumbnail previews and allow multiple file selections
+                showThumbs: true,
+                addMore: true,
+                // Set captions for the file input
+                captions: {
+                    button: "Choose Files",
+                    feedback: "Choose files to upload",
+                    removeConfirmation: "Are you sure you want to remove this file?",
+                },
+                // Define custom templates for displaying files
+                templates: {
+                    box: '<ul class="jFiler-items-list"></ul>',
+                    item: '<li class="jFiler-item">\
+                                <div class="jFiler-item-thumb">\
+                                    <img src="{{fi-icon}}" draggable="false">\
+                                </div>\
+                                <div class="jFiler-item-assets">\
+                                    <a class="icon-jfi-trash jFiler-item-trash-action"></a>\
+                                </div>\
+                            </li>',
+                    progressBar: '<div class="bar"></div>',
+                    removeConfirmation: true, 
+                    _selectors: {
+                        list: '.jFiler-items-list',
+                        item: '.jFiler-item',
+                        remove: '.jFiler-item-trash-action'
+                    }
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

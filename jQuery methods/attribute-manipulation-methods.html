@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced jQuery Methods Examples</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>attr()</h2>
+    <p id="attr-example" data-info="Original Info">Hover over me to see the data attribute change.</p>
+    <button id="set-attr-btn">Set Data Attribute</button>
+    <button id="get-attr-btn">Get Data Attribute</button>
+
+    <h2>prop()</h2>
+    <input type="checkbox" id="prop-example">
+    <label for="prop-example">Checkbox (Initially Unchecked)</label>
+    <button id="set-prop-btn">Set Checked Property</button>
+    <button id="get-prop-btn">Get Checked Property</button>
+
+    <h2>html()</h2>
+    <div id="html-example">Original HTML content.</div>
+    <button id="set-html-btn">Set HTML Content</button>
+    <button id="get-html-btn">Get HTML Content</button>
+
+    <h2>text()</h2>
+    <div id="text-example">Original text content.</div>
+    <button id="set-text-btn">Set Text Content</button>
+    <button id="get-text-btn">Get Text Content</button>
+
+    <h2>val()</h2>
+    <input type="text" id="val-example" value="Original value">
+    <button id="set-val-btn">Set Input Value</button>
+    <button id="get-val-btn">Get Input Value</button>
+
+    <script>
+        // attr() example
+        $("#set-attr-btn").click(function() {
+            $("#attr-example").attr("data-info", "Updated Info");
+        });
+        $("#get-attr-btn").click(function() {
+            alert("Data Info: " + $("#attr-example").attr("data-info"));
+        });
+
+        // prop() example
+        $("#set-prop-btn").click(function() {
+            $("#prop-example").prop("checked", true);
+        });
+        $("#get-prop-btn").click(function() {
+            alert("Checkbox Checked: " + $("#prop-example").prop("checked"));
+        });
+
+        // html() example
+        $("#set-html-btn").click(function() {
+            $("#html-example").html("<strong>Updated HTML content.</strong>");
+        });
+        $("#get-html-btn").click(function() {
+            alert("HTML Content: " + $("#html-example").html());
+        });
+
+        // text() example
+        $("#set-text-btn").click(function() {
+            $("#text-example").text("Updated text content.");
+        });
+        $("#get-text-btn").click(function() {
+            alert("Text Content: " + $("#text-example").text());
+        });
+
+        // val() example
+        $("#set-val-btn").click(function() {
+            $("#val-example").val("Updated value");
+        });
+        $("#get-val-btn").click(function() {
+            alert("Input Value: " + $("#val-example").val());
+        });
+    </script>
+
+</body>
+</html>

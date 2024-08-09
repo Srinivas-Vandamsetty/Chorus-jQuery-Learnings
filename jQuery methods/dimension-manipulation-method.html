@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Dimension Methods Examples</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid blue;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>height()</h2>
+    <div id="height-example" class="box">Box</div>
+    <button id="set-height-btn">Set Height</button>
+    <button id="get-height-btn">Get Height</button>
+
+    <h2>innerHeight()</h2>
+    <div id="innerHeight-example" class="box">Box</div>
+    <button id="set-innerHeight-btn">Set Inner Height</button>
+    <button id="get-innerHeight-btn">Get Inner Height</button>
+
+    <h2>outerHeight()</h2>
+    <div id="outerHeight-example" class="box">Box</div>
+    <button id="set-outerHeight-btn">Set Outer Height</button>
+    <button id="get-outerHeight-btn">Get Outer Height</button>
+
+    <h2>offset()</h2>
+    <div id="offset-example" class="box">Box</div>
+    <button id="set-offset-btn">Set Offset</button>
+    <button id="get-offset-btn">Get Offset</button>
+
+    <h2>position()</h2>
+    <div id="position-example" class="box">Box</div>
+    <button id="get-position-btn">Get Position</button>
+
+    <h2>width()</h2>
+    <div id="width-example" class="box">Box</div>
+    <button id="set-width-btn">Set Width</button>
+    <button id="get-width-btn">Get Width</button>
+
+    <h2>innerWidth()</h2>
+    <div id="innerWidth-example" class="box">Box</div>
+    <button id="set-innerWidth-btn">Set Inner Width</button>
+    <button id="get-innerWidth-btn">Get Inner Width</button>
+
+    <h2>outerWidth()</h2>
+    <div id="outerWidth-example" class="box">Box</div>
+    <button id="set-outerWidth-btn">Set Outer Width</button>
+    <button id="get-outerWidth-btn">Get Outer Width</button>
+
+    <script>
+        // height() example
+        $("#set-height-btn").click(function() {
+            $("#height-example").height(200);
+        });
+        $("#get-height-btn").click(function() {
+            alert("Height: " + $("#height-example").height());
+        });
+
+        // innerHeight() example
+        $("#set-innerHeight-btn").click(function() {
+            $("#innerHeight-example").innerHeight(220);
+        });
+        $("#get-innerHeight-btn").click(function() {
+            alert("Inner Height: " + $("#innerHeight-example").innerHeight());
+        });
+
+        // outerHeight() example
+        $("#set-outerHeight-btn").click(function() {
+            $("#outerHeight-example").outerHeight(240);
+        });
+        $("#get-outerHeight-btn").click(function() {
+            alert("Outer Height: " + $("#outerHeight-example").outerHeight());
+        });
+
+        // offset() example
+        $("#set-offset-btn").click(function() {
+            $("#offset-example").offset({ top: 100, left: 100 });
+        });
+        $("#get-offset-btn").click(function() {
+            var offset = $("#offset-example").offset();
+            alert("Offset - Top: " + offset.top + ", Left: " + offset.left);
+        });
+
+        // position() example
+        $("#get-position-btn").click(function() {
+            var position = $("#position-example").position();
+            alert("Position - Top: " + position.top + ", Left: " + position.left);
+        });
+
+        // width() example
+        $("#set-width-btn").click(function() {
+            $("#width-example").width(300);
+        });
+        $("#get-width-btn").click(function() {
+            alert("Width: " + $("#width-example").width());
+        });
+
+        // innerWidth() example
+        $("#set-innerWidth-btn").click(function() {
+            $("#innerWidth-example").innerWidth(320);
+        });
+        $("#get-innerWidth-btn").click(function() {
+            alert("Inner Width: " + $("#innerWidth-example").innerWidth());
+        });
+
+        // outerWidth() example
+        $("#set-outerWidth-btn").click(function() {
+            $("#outerWidth-example").outerWidth(340);
+        });
+        $("#get-outerWidth-btn").click(function() {
+            alert("Outer Width: " + $("#outerWidth-example").outerWidth());
+        });
+    </script>
+
+</body>
+</html>

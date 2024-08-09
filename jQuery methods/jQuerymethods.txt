@@ -1,0 +1,250 @@
+# jQuery Animation Methods Definitions
+
+1. **.animate(properties, duration, easing, complete)**
+   - **Definition**: Animates the CSS properties of an element.
+   - **Usage**: Creates custom animations by changing the values of CSS properties over a specified duration.
+   - **Example**:
+     ```javascript
+     $('#myElement').animate({ opacity: 0.5, left: '250px' }, 1000);
+     ```
+
+2. **.fadeIn(duration, easing, complete)**
+   - **Definition**: Fades in an element by changing its opacity.
+   - **Usage**: Makes an element visible by animating its opacity from 0 to 1.
+   - **Example**:
+     ```javascript
+     $('#myElement').fadeIn(500);
+     ```
+
+3. **.fadeOut(duration, easing, complete)**
+   - **Definition**: Fades out an element by changing its opacity.
+   - **Usage**: Hides an element by animating its opacity from 1 to 0.
+   - **Example**:
+     ```javascript
+     $('#myElement').fadeOut(500);
+     ```
+
+4. **.slideDown(duration, easing, complete)**
+   - **Definition**: Slides down an element by changing its height.
+   - **Usage**: Reveals an element by animating its height from 0 to its natural height.
+   - **Example**:
+     ```javascript
+     $('#myElement').slideDown(500);
+     ```
+
+5. **.slideUp(duration, easing, complete)**
+   - **Definition**: Slides up an element by changing its height.
+   - **Usage**: Hides an element by animating its height from its natural height to 0.
+   - **Example**:
+     ```javascript
+     $('#myElement').slideUp(500);
+     ```
+
+6. **.slideToggle(duration, easing, complete)**
+   - **Definition**: Toggles between sliding up and sliding down.
+   - **Usage**: Alternates between showing and hiding an element with a sliding effect.
+   - **Example**:
+     ```javascript
+     $('#myElement').slideToggle(500);
+     ```
+
+# jQuery Attribute Methods Definitions
+
+1. **.attr(attributeName, value)**
+   - **Definition**: Gets or sets the value of an attribute.
+   - **Usage**: Retrieves or changes the value of an attribute on the selected elements.
+   - **Example**:
+     ```javascript
+     // Get the value
+     var id = $('#myElement').attr('id');
+     console.log(id);
+
+     // Set the value
+     $('#myElement').attr('id', 'newId');
+     ```
+
+2. **.removeAttr(attributeName)**
+   - **Definition**: Removes an attribute from the selected elements.
+   - **Usage**: Deletes the specified attribute from the selected elements.
+   - **Example**:
+     ```javascript
+     $('#myElement').removeAttr('id');
+     ```
+
+3. **.prop(propertyName, value)**
+   - **Definition**: Gets or sets the properties of elements.
+   - **Usage**: Retrieves or changes boolean properties of elements, such as `checked` or `disabled`.
+   - **Example**:
+     ```javascript
+     // Get the property
+     var isChecked = $('#myCheckbox').prop('checked');
+     console.log(isChecked);
+
+     // Set the property
+     $('#myCheckbox').prop('checked', true);
+     ```
+
+4. **.removeProp(propertyName)**
+   - **Definition**: Removes a property from the selected elements.
+   - **Usage**: Deletes the specified property from the selected elements.
+   - **Example**:
+     ```javascript
+     $('#myCheckbox').removeProp('checked');
+     ```
+
+# jQuery CSS Manipulation Methods Definitions
+
+1. **.css(propertyName, value)**
+   - **Definition**: Gets or sets the CSS properties of elements.
+   - **Usage**: Retrieves or changes the CSS property values of the selected elements.
+   - **Example**:
+     ```javascript
+     // Get the CSS property
+     var color = $('#myElement').css('color');
+     console.log(color);
+
+     // Set the CSS property
+     $('#myElement').css('color', 'red');
+     ```
+
+2. **.addClass(className)**
+   - **Definition**: Adds one or more classes to the selected elements.
+   - **Usage**: Applies the specified class(es) to the elements.
+   - **Example**:
+     ```javascript
+     $('#myElement').addClass('newClass');
+     ```
+
+3. **.removeClass(className)**
+   - **Definition**: Removes one or more classes from the selected elements.
+   - **Usage**: Removes the specified class(es) from the elements.
+   - **Example**:
+     ```javascript
+     $('#myElement').removeClass('oldClass');
+     ```
+
+4. **.toggleClass(className)**
+   - **Definition**: Toggles a class on and off for the selected elements.
+   - **Usage**: Adds the class if it is not present, or removes it if it is.
+   - **Example**:
+     ```javascript
+     $('#myElement').toggleClass('toggleClass');
+     ```
+
+5. **.hasClass(className)**
+   - **Definition**: Checks if the selected elements have a specific class.
+   - **Usage**: Returns `true` if the class is present, otherwise `false`.
+   - **Example**:
+     ```javascript
+     var hasClass = $('#myElement').hasClass('someClass');
+     console.log(hasClass);
+     ```
+
+# jQuery DOM Manipulation Methods Definitions
+
+1. **.html(content)**
+   - **Definition**: Gets or sets the HTML content of an element.
+   - **Usage**: Retrieves or replaces the inner HTML of the selected elements.
+   - **Example**:
+     ```javascript
+     // Get the HTML content
+     var content = $('#myElement').html();
+     console.log(content);
+
+     // Set the HTML content
+     $('#myElement').html('<p>New content</p>');
+     ```
+
+2. **.text(content)**
+   - **Definition**: Gets or sets the text content of an element.
+   - **Usage**: Retrieves or replaces the text inside the selected elements.
+   - **Example**:
+     ```javascript
+     // Get the text content
+     var text = $('#myElement').text();
+     console.log(text);
+
+     // Set the text content
+     $('#myElement').text('New text');
+     ```
+
+3. **.append(content)**
+   - **Definition**: Adds content to the end of the selected elements.
+   - **Usage**: Inserts content (HTML, text, or elements) as the last child of the selected elements.
+   - **Example**:
+     ```javascript
+     $('#myElement').append('<p>Appended content</p>');
+     ```
+
+4. **.prepend(content)**
+   - **Definition**: Adds content to the beginning of the selected elements.
+   - **Usage**: Inserts content (HTML, text, or elements) as the first child of the selected elements.
+   - **Example**:
+     ```javascript
+     $('#myElement').prepend('<p>Prepended content</p>');
+     ```
+
+5. **.remove()**
+   - **Definition**: Removes the selected elements from the DOM.
+   - **Usage**: Deletes the selected elements and their content from the DOM.
+   - **Example**:
+     ```javascript
+     $('#myElement').remove();
+     ```
+
+6. **.empty()**
+   - **Definition**: Removes all child elements and text from the selected elements.
+   - **Usage**: Clears the contents of the selected elements without removing the elements themselves.
+   - **Example**:
+     ```javascript
+     $('#myElement').empty();
+     ```
+
+# jQuery Dimension Manipulation Methods Definitions
+
+1. **.width(value)**
+   - **Definition**: Gets or sets the width of an element.
+   - **Usage**: Retrieves or changes the width of the selected elements.
+   - **Example**:
+     ```javascript
+     // Get the width
+     var width = $('#myElement').width();
+     console.log(width);
+
+     // Set the width
+     $('#myElement').width(200);
+     ```
+
+2. **.height(value)**
+   - **Definition**: Gets or sets the height of an element.
+   - **Usage**: Retrieves or changes the height of the selected elements.
+   - **Example**:
+     ```javascript
+     // Get the height
+     var height = $('#myElement').height();
+     console.log(height);
+
+     // Set the height
+     $('#myElement').height(100);
+     ```
+
+3. **.innerWidth()**
+   - **Definition**: Gets the width of an element including padding but not borders or margins.
+   - **Usage**: Retrieves the width of the selected elements, including padding.
+   - **Example**:
+     ```javascript
+     var innerWidth = $('#myElement').innerWidth();
+     console.log(innerWidth);
+     ```
+
+4. **.innerHeight()**
+   - **Definition**: Gets the height of an element including padding but not borders or margins.
+   - **Usage**: Retrieves the height of the selected elements, including padding.
+   - **Example**:
+     ```javascript
+     var innerHeight = $('#myElement').innerHeight();
+     console.log(innerHeight);
+     ```
+
+5. **.outerWidth(includeMargin)**
+   - **Definition**: Gets the

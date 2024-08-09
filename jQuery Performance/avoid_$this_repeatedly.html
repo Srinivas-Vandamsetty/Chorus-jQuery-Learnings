@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cache $(this) Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>Click Item 1</li>
+        <li>Click Item 2</li>
+        <li>Click Item 3</li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            // Iterate over each list item
+            $('#list li').each(function() {
+                // Cache the jQuery object for the current list item
+                var $this = $(this);
+                // Set the text color of the list item to green
+                $this.css('color', 'green');
+                // Attach a click event handler to the list item
+                $this.on('click', function() {
+                    // Show an alert with the text of the clicked item
+                    alert('Item clicked: ' + $this.text());
+                });
+            });
+        });
+    </script>
+</body>
+</html>

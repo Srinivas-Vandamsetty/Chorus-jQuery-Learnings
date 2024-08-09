@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertify.js Example</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+</head>
+<body>
+
+    <button id="alert-btn">Show Alert</button>
+    <button id="confirm-btn">Show Confirm</button>
+    <button id="prompt-btn">Show Prompt</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Show a simple alert message when the 'Show Alert' button is clicked
+            $('#alert-btn').click(function() {
+                alertify.alert('Alert', 'This is a simple alert message.');
+            });
+    
+            // Show a confirmation dialog when the 'Show Confirm' button is clicked
+            $('#confirm-btn').click(function() {
+                alertify.confirm('Confirm', 'Are you sure you want to continue?',
+                    // Function to execute if the user confirms
+                    function() { alertify.success('Confirmed'); },
+                    // Function to execute if the user cancels
+                    function() { alertify.error('Cancelled'); }
+                );
+            });
+    
+            // Show a prompt dialog when the 'Show Prompt' button is clicked
+            $('#prompt-btn').click(function() {
+                alertify.prompt('Prompt', 'What is your name?', '',
+                    // Function to execute with the user's input
+                    function(evt, value) { alertify.success('You entered: ' + value); },
+                    // Function to execute if the user cancels
+                    function() { alertify.error('Cancelled'); }
+                );
+            });
+        });
+    </script>
+</body>
+</html>

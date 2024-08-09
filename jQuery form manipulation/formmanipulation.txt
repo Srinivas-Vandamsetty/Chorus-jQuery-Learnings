@@ -1,0 +1,117 @@
+# jQuery Form Manipulation Methods Definitions
+
+1. **$.serialize()**
+   - **Definition**: Serializes a form's data into a query string. This method is useful for sending form data to the server via AJAX.
+   - **Usage**: Converts form data into a URL-encoded string, which can be sent via GET or POST requests.
+   - **Example**:
+     ```javascript
+     var formData = $('#myForm').serialize();
+     $.post('https://example.com/api/submit', formData, function(response) {
+       console.log(response);
+     });
+     ```
+
+2. **$.serializeArray()**
+   - **Definition**: Serializes a form's data into an array of name/value objects. This method provides a more detailed structure than `$.serialize()`.
+   - **Usage**: Useful for working with form data in a more structured way, such as processing it before sending it to the server.
+   - **Example**:
+     ```javascript
+     var formArray = $('#myForm').serializeArray();
+     console.log(formArray);
+     ```
+
+3. **$.val()**
+   - **Definition**: Gets or sets the value of form elements such as `<input>`, `<textarea>`, and `<select>`.
+   - **Usage**: Allows you to retrieve or update the value of form elements. Can be used to get or set values individually or in bulk.
+   - **Example**:
+     ```javascript
+     // Get the value
+     var inputValue = $('#myInput').val();
+     console.log(inputValue);
+
+     // Set the value
+     $('#myInput').val('New Value');
+     ```
+
+4. **$.prop()**
+   - **Definition**: Gets or sets the properties of form elements, such as `checked`, `disabled`, or `selected`.
+   - **Usage**: Useful for manipulating boolean properties of form elements.
+   - **Example**:
+     ```javascript
+     // Check if a checkbox is checked
+     var isChecked = $('#myCheckbox').prop('checked');
+     console.log(isChecked);
+
+     // Set the checkbox to be checked
+     $('#myCheckbox').prop('checked', true);
+     ```
+
+5. **$.attr()**
+   - **Definition**: Gets or sets the attributes of form elements. It can be used to work with attributes other than properties.
+   - **Usage**: Allows for manipulation of HTML attributes such as `value`, `name`, `id`, etc.
+   - **Example**:
+     ```javascript
+     // Get an attribute
+     var inputId = $('#myInput').attr('id');
+     console.log(inputId);
+
+     // Set an attribute
+     $('#myInput').attr('id', 'newId');
+     ```
+
+6. **$.reset()**
+   - **Definition**: Resets a form to its default values. This method is used to clear form fields and revert them to their original state.
+   - **Usage**: Useful for clearing user input or restoring the form to its initial state.
+   - **Example**:
+     ```javascript
+     $('#myForm')[0].reset(); // Use native reset method
+     ```
+
+7. **$.focus()**
+   - **Definition**: Sets focus on a specified form element.
+   - **Usage**: Automatically moves the cursor to the specified form element, improving user experience.
+   - **Example**:
+     ```javascript
+     $('#myInput').focus();
+     ```
+
+8. **$.blur()**
+   - **Definition**: Removes focus from a specified form element.
+   - **Usage**: Useful for handling events when a form element loses focus.
+   - **Example**:
+     ```javascript
+     $('#myInput').blur();
+     ```
+
+9. **$.disable()**
+   - **Definition**: Disables a specified form element.
+   - **Usage**: Prevents user interaction with the form element by making it unresponsive.
+   - **Example**:
+     ```javascript
+     $('#myInput').prop('disabled', true);
+     ```
+
+10. **$.enable()**
+    - **Definition**: Enables a previously disabled form element.
+    - **Usage**: Restores user interaction capability for the form element.
+    - **Example**:
+      ```javascript
+      $('#myInput').prop('disabled', false);
+      ```
+
+11. **$.show()**
+    - **Definition**: Displays a hidden form element.
+    - **Usage**: Makes a form element visible if it was hidden.
+    - **Example**:
+      ```javascript
+      $('#myInput').show();
+      ```
+
+12. **$.hide()**
+    - **Definition**: Hides a visible form element.
+    - **Usage**: Makes a form element invisible, but still present in the DOM.
+    - **Example**:
+      ```javascript
+      $('#myInput').hide();
+      ```
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>load Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="loadButton">Load Data with load()</button>
+    <div id="loadContent"></div>
+
+    <script>
+        // Trigger data loading when the button is clicked
+        $("#loadButton").click(function(){
+            // Use jQuery's load() method to fetch and insert data from 'data.txt' into 'loadContent' div
+            $("#loadContent").load("data.txt");
+        });
+    </script>
+</body>
+</html>

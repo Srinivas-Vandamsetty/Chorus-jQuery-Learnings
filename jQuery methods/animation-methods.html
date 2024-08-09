@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animation Methods Examples</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>animate()</h2>
+    <div id="animate-example" class="box"></div>
+    <button id="animate-btn">Animate</button>
+
+    <h2>queue()</h2>
+    <div id="queue-example" class="box"></div>
+    <button id="queue-btn">Queue Animations</button>
+
+    <h2>stop()</h2>
+    <div id="stop-example" class="box"></div>
+    <button id="start-btn">Start Animation</button>
+    <button id="stop-btn">Stop Animation</button>
+
+    <h2>fadeIn()</h2>
+    <div id="fadeIn-example" class="box" style="display: none;"></div>
+    <button id="fadeIn-btn">Fade In</button>
+
+    <h2>fadeOut()</h2>
+    <div id="fadeOut-example" class="box"></div>
+    <button id="fadeOut-btn">Fade Out</button>
+
+    <h2>fadeTo()</h2>
+    <div id="fadeTo-example" class="box"></div>
+    <button id="fadeTo-btn">Fade To 50%</button>
+
+    <h2>fadeToggle()</h2>
+    <div id="fadeToggle-example" class="box"></div>
+    <button id="fadeToggle-btn">Fade Toggle</button>
+
+    <h2>hide()</h2>
+    <div id="hide-example" class="box"></div>
+    <button id="hide-btn">Hide</button>
+
+    <h2>show()</h2>
+    <div id="show-example" class="box" style="display: none;"></div>
+    <button id="show-btn">Show</button>
+
+    <h2>toggle()</h2>
+    <div id="toggle-example" class="box"></div>
+    <button id="toggle-btn">Toggle</button>
+
+    <h2>slideUp()</h2>
+    <div id="slideUp-example" class="box"></div>
+    <button id="slideUp-btn">Slide Up</button>
+
+    <h2>slideDown()</h2>
+    <div id="slideDown-example" class="box" style="display: none;"></div>
+    <button id="slideDown-btn">Slide Down</button>
+
+    <h2>slideToggle()</h2>
+    <div id="slideToggle-example" class="box"></div>
+    <button id="slideToggle-btn">Slide Toggle</button>
+
+    <script>
+        // animate() example
+        $("#animate-btn").click(function() {
+            $("#animate-example").animate({
+                width: "200px",
+                height: "200px",
+                backgroundColor: "#ff0000"
+            }, 1000);
+        });
+
+        // queue() example
+        $("#queue-btn").click(function() {
+            var div = $("#queue-example");
+            div.queue(function(next) {
+                div.animate({ width: "200px" }, 500);
+                next();
+            });
+            div.queue(function(next) {
+                div.animate({ height: "200px" }, 500);
+                next();
+            });
+            div.queue(function(next) {
+                div.css("background-color", "green");
+                next();
+            });
+        });
+
+        // stop() example
+        $("#start-btn").click(function() {
+            $("#stop-example").animate({ width: "300px" }, 5000);
+        });
+        $("#stop-btn").click(function() {
+            $("#stop-example").stop();
+        });
+
+        // fadeIn() example
+        $("#fadeIn-btn").click(function() {
+            $("#fadeIn-example").fadeIn(1000);
+        });
+
+        // fadeOut() example
+        $("#fadeOut-btn").click(function() {
+            $("#fadeOut-example").fadeOut(1000);
+        });
+
+        // fadeTo() example
+        $("#fadeTo-btn").click(function() {
+            $("#fadeTo-example").fadeTo(1000, 0.5);
+        });
+
+        // fadeToggle() example
+        $("#fadeToggle-btn").click(function() {
+            $("#fadeToggle-example").fadeToggle(1000);
+        });
+
+        // hide() example
+        $("#hide-btn").click(function() {
+            $("#hide-example").hide();
+        });
+
+        // show() example
+        $("#show-btn").click(function() {
+            $("#show-example").show();
+        });
+
+        // toggle() example
+        $("#toggle-btn").click(function() {
+            $("#toggle-example").toggle();
+        });
+
+        // slideUp() example
+        $("#slideUp-btn").click(function() {
+            $("#slideUp-example").slideUp(1000);
+        });
+
+        // slideDown() example
+        $("#slideDown-btn").click(function() {
+            $("#slideDown-example").slideDown(1000);
+        });
+
+        // slideToggle() example
+        $("#slideToggle-btn").click(function() {
+            $("#slideToggle-example").slideToggle(1000);
+        });
+    </script>
+
+</body>
+</html>

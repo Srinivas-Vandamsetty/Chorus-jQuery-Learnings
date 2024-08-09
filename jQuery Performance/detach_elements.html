@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detach Elements Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            // Detach all list items from the list, removing them from the DOM but keeping them in memory
+            var $listItems = $('#list li').detach();
+    
+            // Update the text of each detached list item
+            $listItems.each(function() {
+                $(this).text('Updated ' + $(this).text());
+            });
+    
+            // Reinsert the updated list items back into the list
+            $('#list').append($listItems);
+        });
+    </script>   
+</body>
+</html>
