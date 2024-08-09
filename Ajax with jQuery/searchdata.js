@@ -31,6 +31,6 @@ $(document).ready(function() {
     $('#result').on('click', 'li', function() {
         // Set the search input value to the clicked item's name
         $('#search').val($(this).text().split('|')[0].trim());
-        $("#result").empty(); // Clear search results after selection
+        $("#result").empty();
     });
 });
