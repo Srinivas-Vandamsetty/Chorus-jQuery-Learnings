@@ -8,4 +8,4 @@
 
 4. jQuery plugins
 
-5. jQuery performance
+5. jQuery performance optimization
