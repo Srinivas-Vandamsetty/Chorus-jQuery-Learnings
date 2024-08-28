@@ -81,7 +81,7 @@
 
         // queue() example
         $("#queue-btn").click(function() {
-            var div = $("#queue-example");
+            let div = $("#queue-example");
             div.queue(function(next) {
                 div.animate({ width: "200px" }, 500);
                 next();

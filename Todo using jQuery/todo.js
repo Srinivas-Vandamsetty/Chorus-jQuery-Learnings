@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#input').change(function () {
         // Trim whitespace from input
-        var input = $(this).val().trim();
+        let input = $(this).val().trim();
         // Check if input is not empty
         if (input !== '') { 
             $('ul').append('<li>' + input + ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i></li>');

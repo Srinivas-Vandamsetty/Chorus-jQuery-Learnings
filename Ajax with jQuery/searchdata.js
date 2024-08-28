@@ -4,8 +4,8 @@ $(document).ready(function() {
 
     // Handle keyup event on the search input
     $('#search').keyup(function() {
-        var searchField = $(this).val();
-        var expression = new RegExp(searchField, "i");
+        let searchField = $(this).val();
+        let expression = new RegExp(searchField, "i");
 
         // Perform AJAX request to fetch data
         $.ajax({
@@ -13,7 +13,7 @@ $(document).ready(function() {
             method: 'GET',
             dataType: 'json',
             success: function(response) {
-                var items = response.data || [];
+                let items = response.data || [];
                 $('#result').empty();
 
                 // Filter items based on the search input and update the results

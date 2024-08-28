@@ -10,12 +10,12 @@
     <script>
         $(document).ready(function() {
             // Cache the container element for efficiency
-            var $container = $('#container');
+            let $container = $('#container');
             // Create an array to hold HTML strings
-            var elements = [];
+            let elements = [];
             
             // Generate HTML strings for 100 items and push them into the array
-            for (var i = 0; i < 100; i++) {
+            for (let i = 0; i < 100; i++) {
                 elements.push('<div>Item ' + i + '</div>');
             }
             

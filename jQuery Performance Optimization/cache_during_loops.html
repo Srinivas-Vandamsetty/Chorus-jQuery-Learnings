@@ -14,12 +14,12 @@
     <script>
         $(document).ready(function() {
             // Cache the list items jQuery object
-            var $listItems = $('#list li');
+            let $listItems = $('#list li');
             // Cache the number of list items
-            var length = $listItems.length;
+            let length = $listItems.length;
     
             // Iterate over each list item
-            for (var i = 0; i < length; i++) {
+            for (let i = 0; i < length; i++) {
                 // Perform operations on each list item and log its text
                 console.log($listItems.eq(i).text());
             }

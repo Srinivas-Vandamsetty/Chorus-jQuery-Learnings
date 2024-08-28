@@ -40,15 +40,15 @@
         $(document).ready(function() {
             // Serialize form data and display it when the 'Serialize Form' button is clicked
             $('#serializeBtn').click(function() {
-                var formData = $('#myForm').serialize();
-                var decodedData = decodeURIComponent(formData);
+                let formData = $('#myForm').serialize();
+                let decodedData = decodeURIComponent(formData);
                 $('#result').text('Serialized Data: ' + decodedData.replace(/&/g, ', ').replace(/=/g, ' = '));
             });
 
             // Serialize form data as an array and display it when the 'Serialize Array' button is clicked
             $('#serializeArrayBtn').click(function() {
-                var formArray = $('#myForm').serializeArray();
-                var output = 'Serialized Array:<br>';
+                let formArray = $('#myForm').serializeArray();
+                let output = 'Serialized Array:<br>';
                 $.each(formArray, function(index, field) {
                     output += field.name + ': ' + field.value + '<br>';
                 });

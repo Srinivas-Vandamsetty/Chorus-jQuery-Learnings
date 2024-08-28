@@ -17,7 +17,7 @@
             // Use jQuery's getJSON() to fetch data from 'data.json'
             $.getJSON("data.json", function(data){
                 // Format the retrieved JSON data and display it in the 'jsonContent' div
-                var content = "Name: " + data.name + "<br>Age: " + data.age;
+                let content = "Name: " + data.name + "<br>Age: " + data.age;
                 $("#jsonContent").html(content);
             });
         });
